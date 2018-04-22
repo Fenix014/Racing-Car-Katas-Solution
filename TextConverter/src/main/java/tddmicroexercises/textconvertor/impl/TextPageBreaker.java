@@ -27,7 +27,7 @@ public class TextPageBreaker implements ITextPageBreaker {
         textPageReader.close();
         return this.breaks;
 	}
-	
+
 	public void setTextPageReader(ITextPageReader textPageReader) {
 		this.textPageReader = textPageReader;
 	}
