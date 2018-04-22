@@ -12,8 +12,7 @@ public class TicketDispenserIntegrationTest {
 
 		ITurnNumberSequence turnNumberSequence = new TurnNumberSequence();
 
-		TicketDispenser ticketDispenser = new TicketDispenser();
-		ticketDispenser.setTurnNumberSequence(turnNumberSequence);
+		TicketDispenser ticketDispenser = new TicketDispenser(turnNumberSequence);
 
 		TurnTicket previousTicket = ticketDispenser.getTurnTicket();
 		TurnTicket newTicket = ticketDispenser.getTurnTicket();
@@ -26,11 +25,8 @@ public class TicketDispenserIntegrationTest {
 
 		ITurnNumberSequence turnNumberSequence = new TurnNumberSequence();
 
-		TicketDispenser ticketDispenser1 = new TicketDispenser();
-		ticketDispenser1.setTurnNumberSequence(turnNumberSequence);
-
-		TicketDispenser ticketDispenser2 = new TicketDispenser();
-		ticketDispenser2.setTurnNumberSequence(turnNumberSequence);
+		TicketDispenser ticketDispenser1 = new TicketDispenser(turnNumberSequence);
+		TicketDispenser ticketDispenser2 = new TicketDispenser(turnNumberSequence);
 
 		TurnTicket previousTicket = ticketDispenser1.getTurnTicket();
 		TurnTicket newTicket = ticketDispenser2.getTurnTicket();

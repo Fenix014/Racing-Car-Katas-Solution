@@ -13,8 +13,7 @@ public class TicketDispenserTest {
 		ITurnNumberSequence turnNumberSequence = mock(ITurnNumberSequence.class);
 		when(turnNumberSequence.getNextTurnNumber()).thenReturn(5);
 
-		TicketDispenser ticketDispenser = new TicketDispenser();
-		ticketDispenser.setTurnNumberSequence(turnNumberSequence);
+		TicketDispenser ticketDispenser = new TicketDispenser(turnNumberSequence);
 		assertEquals(5, ticketDispenser.getTurnTicket().getTurnNumber());
 	}
 
